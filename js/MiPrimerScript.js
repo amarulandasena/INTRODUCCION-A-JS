@@ -92,6 +92,35 @@ for (let contador2 = 2; contador2 <= 10; contador2 +=1){
     }
 }
 
+/* Switch
+let diaSemana = Number(prompt("Ingrese un número entre 1 y 7: "))
+switch (diaSemana){
+    case 1:
+        alert("Lunes");
+        break;
+    case 2:
+        alert("Martes");
+        break;
+    case 3:
+        alert("Miercoles");
+        break;
+    case 4:
+        alert("Jueves");
+        break;
+    case 5:
+        alert("Viernes");
+        break;
+    case 6:
+        alert("Sabado");
+        break;
+    case 7:
+        alert("Domingo");
+        break;
+    default:
+        alert("Número incorrecto");
+} */
+
+
 
 
 
