@@ -84,3 +84,17 @@ console.log(Math.max(1, 3, 5, 7, 9));
 let numeros = [100, 200, 300, 400, 500, 600];
 console.log(Math.min(25, 50, 75, ...numeros, 700, 800, 900));
 
+// Función don el objeto Math.
+const puntoAleatorio = (radio) => {
+
+    let angulo = Math.random() * 2 * Math.PI;
+    return {x : radio * Math.cos(angulo), y : radio * Math.sin(angulo)};
+}
+
+console.log(puntoAleatorio(2));
+
+// Función random.
+console.log("Número aleatorio redondeado al menor: " + Math.floor(Math.random() * 10));
+console.log("Número aleatorio redondeado al mayor: " + Math.ceil(Math.random() * 10));
+console.log("Número aleatorio redondeado: " + Math.round(Math.random() * 10));
+
