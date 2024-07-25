@@ -1,0 +1,20 @@
+// Notación de clase.
+class Vehiculo {
+    constructor (marca, referencia, modelo, valor) {
+        this.marca = marca;
+        this.referencia = referencia;
+        this.modelo = modelo;
+        this.valor = valor;
+    };
+
+    imprimir () {
+        console.log("Marca: " + `${this.marca}` + "\n" +
+                    "Referencia: " + `${this.referencia}` + "\n" + 
+                    "Modelo: " + `${this.modelo}` + "\n" +
+                    "Valor: " + `${this.valor}`
+        );
+    };
+}
+let vehiculo1 = new Vehiculo ("Renault", "Megane", 2020, 42000000);
+vehiculo1.imprimir;
+

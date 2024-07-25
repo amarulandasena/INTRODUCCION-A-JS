@@ -58,4 +58,29 @@ let elementosFiltrados = filtrar(personas, personas => personas.mayor_de_edad);
 console.log(mapear(elementosFiltrados, personas => personas.nombre));
 
 
+//Reconocimiento de textos.
+const contarPor = (elementos, nombreGrupo) => {
+    let cuentas = [];
+    for (let elemento of elementos) {
+        let nombre = nombreGrupo(elemento);
+        let conocido = cuentas.findIndex(c => c.nombre == nombre);
 
+        if (conocido == -1){
+            cuentas.push({nombre, cuentas:1});
+        } else {
+            cuentas[conocido].cuenta++;
+        }
+    }
+    return cuentas;
+}
+console.log(contarPor([1,2,3,4,5,6], n => n > 2));
+
+// Rducir o resumir un arreglo.
+function reduce(arreglo, combinar, inicio) {
+    let actual = inicio;
+    for (let elemento of arreglo){
+        actual = combinar(actual, elemento);
+    }
+    return actual;
+}
+console.log(reduce([1,2,3,4,5,6,7,8,9], (a, b) => a + b, 0));
