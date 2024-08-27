@@ -42,3 +42,29 @@ console.log(iteradorOK.next());             /* value = valor del caracter, done 
 console.log(iteradorOK.next());
 console.log(iteradorOK.next());
 
+// Getters y los Setters.
+class Temperatura {
+    constructor (celsius) {
+        this.celsius = celsius;
+    }
+
+    get fahrenheit () {
+        return this.celsius * 1.8 + 32;
+    }
+
+    set fahrenheit (valor) {
+        this.celsius = (valor - 32) / 1.8;
+    }
+
+    static desdeFahrenheit (valor) {
+        this.celsius = (valor - 32) / 1.8;
+    }
+}
+
+Temperatura.desdeFahrenheit(100);
+console.log(Temperatura.celsius);
+
+let nuevaTemperatura = new Temperatura (22); 
+console.log(nuevaTemperatura.fahrenheit);
+nuevaTemperatura.fahrenheit = 100;
+console.log(nuevaTemperatura.celsius);
