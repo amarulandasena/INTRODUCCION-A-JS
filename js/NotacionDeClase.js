@@ -82,4 +82,34 @@ for (let {x, y, value} of matriz){
 }
 
 
+// Herencia.
+class MatrizSimetrica extends Matriz {
+    constructor (tamaño, elemento = (x,y) => undefined) {
+        super (tamaño, tamaño, (x,y) => {
+            if (x < y) {
+                return elemento(y,x);
+            } else {
+                return elemento(x,y);
+            }
+        })
+    }
+
+    establecer (x, y, valor) {
+        // super.establecer (x, y, valor);
+
+        if (x != y) {
+            super.establecer (y, x, valor);
+            }
+        
+    }
+}
+
+let matrizSim = new MatrizSimetrica (5, (x,y) => `valor ${x},${y}`);
+console.log("Matriz simétrica: " + "\n" +
+            matrizSim.obtener(2, 3)
+)
+
+console.log(matrizSim instanceof MatrizSimetrica);
+console.log(matrizSim instanceof Matriz);
+
 
