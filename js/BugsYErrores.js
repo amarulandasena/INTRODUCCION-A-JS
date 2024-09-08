@@ -1,3 +1,6 @@
+// Clase Date.
+console.log(new Date());
+
 // Probar una función.
 function Probar (etiqueta, cuerpo) {
     if (!cuerpo()) console.log (`Fallo: ${etiqueta}`);
